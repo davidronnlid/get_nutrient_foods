@@ -4,7 +4,7 @@ const AboutProjectCard = () => {
   return (
     <div className="card">
       <header className="card-header">
-        <p className="card-header-title title is-1">About</p>
+        <p className="card-header-title title is-1">About project</p>
         <button className="card-header-icon" aria-label="more options">
           <span className="icon">
             <i className="fas fa-angle-down" aria-hidden="true"></i>
