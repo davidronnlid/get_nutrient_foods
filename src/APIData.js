@@ -91,15 +91,15 @@ export default function APIData() {
   } else {
     return (
       <>
-        <h2>Nutrient</h2>
+        <p class="title is-1">Nutrient</p>
         <p>{nutrientData.nutrient}</p>
 
-        <h2>Amount per food</h2>
+        <p class="title is-1">Amount per food</p>
 
         <table>
           <thead>
             <tr>
-              <th>Food and amount</th>
+              <th>Food : Amount</th>
             </tr>
           </thead>
           <tbody>
