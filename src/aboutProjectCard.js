@@ -1,4 +1,6 @@
 import ConfidentSmile from "./ConfidentSmile.jpg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 
 const AboutProjectCard = () => {
   return (
@@ -12,29 +14,35 @@ const AboutProjectCard = () => {
         </button>
       </header>
       <div className="card-image">
-        {/* Change size of card (is-XYZ) and commit todays work to GitHub */}
-        <figure className="image">
-          <img src={ConfidentSmile} alt="Placeholder image" />
+        <figure className="image is-16by9">
+          <img
+            src={ConfidentSmile}
+            style={{ objectFit: "cover", objectPosition: "100% 18%" }}
+            alt="Placeholder image"
+          />
         </figure>
       </div>
       <div className="card-content">
-        <div className="content">
+        <div className="content has-text-weight-medium">
           The code for this project was written by David Rönnlid. No help except
           Google, Stack Overflow, blogs, etc. was used.
         </div>
       </div>
-      <footer className="card-footer">
+      <footer className="card-footer has-border">
         <a
           href="https://github.com/davidronnlid/get_nutrient_foods"
-          className="card-footer-item"
+          className="card-footer-item  is-underlined"
         >
-          Project Github page
+          Project Github page{" "}
+          <FontAwesomeIcon icon={faGithubSquare} border pull="right" />
         </a>
+
         <a
           href="https://www.linkedin.com/in/davidronnlid/"
-          className="card-footer-item"
+          className="card-footer-item is-underlined"
         >
-          David Rönnlid on LinkedIn
+          David Rönnlid on LinkedIn{" "}
+          <FontAwesomeIcon icon={faLinkedin} border pull="right" />
         </a>
       </footer>
     </div>
