@@ -18,7 +18,7 @@ const AboutProjectCard = () => {
           <img
             src={ConfidentSmile}
             style={{ objectFit: "cover", objectPosition: "100% 18%" }}
-            alt="Placeholder image"
+            alt="David Rönnlid smiling"
           />
         </figure>
       </div>

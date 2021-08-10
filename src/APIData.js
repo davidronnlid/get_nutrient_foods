@@ -16,6 +16,24 @@ export default function APIData() {
       .then((res) => res.json())
       .then(
         (result) => {
+          console.log(result);
+
+          let listOfNutrientIds = [];
+
+          listOfNutrientIds = result
+            .map((elm) => elm.foodNutrients.map((elm) => elm.number))
+            .flat();
+
+          //listOfNutrientIds is now a single array of the id's for all nutrients but duplicates exist if a nutrient is in several food products
+
+          let uniqueSet = new Set(listOfNutrientIds);
+          listOfNutrientIds = [...uniqueSet];
+          //listOfNutrientIds is now a single array of the UNIQUE id's for all nutrients
+
+          // TO-DO:
+          // Set up search functionality which enables user to pick a micronutrient from the available ones
+          // When user has selected one, a new list of foods and amounts of the selected micronutrient should be displayed
+
           let orderedListOfNutrientAmounts = [];
 
           orderedListOfNutrientAmounts = result.map((elm) =>

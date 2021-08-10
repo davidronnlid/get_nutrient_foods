@@ -1,0 +1,1 @@
+// Dropdown or search functionality should be developed and exported in/from this file for USTBAT select a micronutrient for which they want to display foods and amounts https://medium.com/@pradityadhitama/simple-search-bar-component-functionality-in-react-6589fda3385d
