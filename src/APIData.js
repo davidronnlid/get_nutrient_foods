@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Comp from "./comp";
 
 export default function APIData() {
   const [error, setError] = useState(null);
@@ -6,6 +7,7 @@ export default function APIData() {
   const [nutrientData, setnutrientData] = useState({
     unit: [],
     nutrient: "",
+    listOfNutrientIds: [],
     listOfFoodsAndAmounts: [],
   });
 
@@ -92,6 +94,7 @@ export default function APIData() {
           setnutrientData({
             unit: unit,
             nutrient: nutrient,
+            listOfNutrientIds: listOfNutrientIds,
             listOfFoodsAndAmounts: listOfFoodsAndAmounts,
           });
         },
@@ -109,10 +112,18 @@ export default function APIData() {
   } else {
     return (
       <>
-        <p class="title is-1">Nutrient</p>
+        <p className="title is-1">Nutrient</p>
         <p>{nutrientData.nutrient}</p>
 
-        <p class="title is-1">Amount per food</p>
+        <p className="title is-1">Amount per food</p>
+
+        {nutrientData.listOfNutrientIds ? (
+          <Comp
+            stateProps={{ listOfNutrientIds: nutrientData.listOfNutrientIds }}
+          />
+        ) : null}
+
+        {/* Sub-task of developing a search bar is to be able to list out all the nutrients in the temporarily named comp.js component */}
 
         <table>
           <thead>
